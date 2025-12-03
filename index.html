@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Safety Companion</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="topbar">
+    <div class="brand">Smart Safety Companion</div>
+    <div class="menu">
+      <button class="nav" onclick="showSection('home')">Home</button>
+      <button class="nav" onclick="showSection('sos')">Emergency</button>
+      <button class="nav" onclick="showSection('tips')">Tips</button>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- HOME -->
+    <section id="home" class="page active card">
+      <h1>Smart Safety Companion</h1>
+      <p>A simple women's safety application built using HTML, CSS and JavaScript.  
+         It provides emergency numbers, siren alarm, and safety guidelines.</p>
+    </section>
+
+    <!-- EMERGENCY SECTION -->
+    <section id="sos" class="page card">
+      <h2>Emergency Numbers</h2>
+
+      <div class="grid">
+        <button class="em-call" onclick="makeEmergencyCall('112')">📞 112 (All Emergency)</button>
+        <button class="em-call" onclick="makeEmergencyCall('100')">🚓 100 (Police)</button>
+        <button class="em-call" onclick="makeEmergencyCall('108')">🚑 108 (Ambulance)</button>
+        <button class="em-call" onclick="makeEmergencyCall('101')">🔥 101 (Fire)</button>
+        <button class="em-call" onclick="makeEmergencyCall('1091')">👩‍🦰 1091 (Women Helpline)</button>
+      </div>
+
+      <h3>Safety Alarm</h3>
+      <div class="grid">
+        <button class="btn" onclick="playSiren()">🔊 Play Alarm</button>
+        <button class="btn" onclick="stopSiren()">⏹ Stop Alarm</button>
+      </div>
+
+      <p class="small muted">Emergency calling is supported only on mobile devices.</p>
+    </section>
+
+    <!-- SAFETY TIPS -->
+    <section id="tips" class="page card">
+      <h2>Safety Tips</h2>
+      <ul class="tips-list">
+        <li>Stay in well-lit and crowded locations.</li>
+        <li>Always share your travel plan with a trusted contact.</li>
+        <li>Keep your emergency numbers easily accessible.</li>
+        <li>Avoid being distracted by mobile phones in unsafe areas.</li>
+        <li>Trust your instincts and avoid uncomfortable situations.</li>
+      </ul>
+    </section>
+
+    <footer class="footer small muted">
+      Developed by: Hemalatha — HTML | CSS | JavaScript
+    </footer>
+
+  </main>
+
+  <!-- SIREN AUDIO -->
+  <audio id="sirenAudio" loop>
+    <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" type="audio/ogg">
+  </audio>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
